@@ -63,14 +63,37 @@ Y= A⊕B
 
 
 **PROGRAM**
+module Gate_1 (
+    input  wire a,     // Input A
+    input  wire b,     // Input B
+    output wire and_out,
+    output wire or_out,
+    output wire not_out,   // only on A
+    output wire nand_out,
+    output wire nor_out,
+    output wire xor_out,
+    output wire xnor_out
+);
+
+    assign and_out  = a & b;      // AND gate
+    assign or_out   = a | b;      // OR gate
+    assign not_out  = ~a;         // NOT gate (on input A)
+    assign nand_out = ~(a & b);   // NAND gate
+    assign nor_out  = ~(a | b);   // NOR gate
+    assign xor_out  = a ^ b;      // XOR gate
+    assign xnor_out = ~(a ^ b);   // XNOR gate
+
+endmodule
 
 Program for logic gates and verify its truth table in quartus using Verilog programming
 
  Developed by: RegisterNumber: 
  
 **Logic symbol & Truthtable**
+<img width="1302" height="696" alt="DE EXP 1" src="https://github.com/user-attachments/assets/9a1641fe-847d-4e71-abd5-15053ce7d419" />
 
 **RTL realization Output:** 
+<img width="1056" height="711" alt="DE EXP 1 TD" src="https://github.com/user-attachments/assets/5ec2d1a4-63cf-4209-af97-6f5e3c48809d" />
 
 **RTL**
 
